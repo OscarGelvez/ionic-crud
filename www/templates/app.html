@@ -1,0 +1,33 @@
+
+      <ion-content class="padding">
+      <div class='padding text-center'>
+        <h3>Valora la app</h3>
+       
+        <div>
+          <a href="javascript:" ng-repeat="r in ratingArr" class="padding" >
+            <i class="icon {{r.icon}}" ng-click="setRating(r.value)"></i>
+          </a>
+        </div>
+        <div>
+          <button ui-sref="login" class="button button-block button-calm">Cerrar</button>
+          <button ng-click="getAll()" class="button button-block button-calm">Leer datos</button>
+        </div>
+
+        <div class="list">
+ 
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-person-stalker">ID</i>
+    Usuario
+    <span class="badge badge-assertive">Clave</span>
+  </a>
+   
+   <a class="item item-icon-left" ui-sref="#" ng-repeat="d in names | filter:search">
+    <i class="icon ion-minus-round">{{ d.id }}</i>
+    {{ d.nombre }}
+    <span class="badge badge-positive">{{ d.clave }}</span>
+    
+  </a>
+   
+    
+</div>
+      </div>

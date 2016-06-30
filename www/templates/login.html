@@ -1,0 +1,22 @@
+      <ion-header class="bar-positive">
+      <h3 class="title">Registrar Usuario</h3>
+      <div class="list">
+      
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Usuario</span>
+          <input type="text" ng-model="user" placeholder="Usuario">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Contraseña</span>
+          <input type="password" ng-model="password" ng-minlength="3" placeholder="Contraseña minimo 3 caracteres"> <!-- puedo agregar un pattern(mas exacto) -->
+        </label>
+        <div class="padding">
+          <br>
+<button ng-disabled="!user || !password" class="button button-block button-positive" ui-sref="app" ng-click="registrarUsuario()">Registrar</button>
+        </div>
+
+<button class="button button-block button-positive" ui-sref="app" >Saltar Registro </button>
+      </div>
+    </ion-header-bar>
+     
